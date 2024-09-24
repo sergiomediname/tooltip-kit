@@ -7,190 +7,47 @@
     <link rel="stylesheet" href="./tooltip.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* Box sizing rules */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      /* Prevent font size inflation */
-      html {
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        text-size-adjust: none;
-      }
-
-      /* Remove default margin in favour of better control in authored CSS */
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      p,
-      figure,
-      blockquote,
-      dl,
-      dd {
-        margin: 0;
-      }
-
-      /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-      ul[role="list"],
-      ol[role="list"] {
-        list-style: none;
-      }
-
-      /* Set core body defaults */
-      body {
-        min-height: 100vh;
-        line-height: 1.5;
-      }
-
-      /* Set shorter line heights on headings and interactive elements */
-      h1,
-      h2,
-      h3,
-      h4,
-      button,
-      input,
-      label {
-        line-height: 1.1;
-      }
-
-      /* Balance text wrapping on headings */
-      h1,
-      h2,
-      h3,
-      h4 {
-        text-wrap: balance;
-      }
-
-      /* A elements that don't have a class get default styles */
-      a:not([class]) {
-        text-decoration-skip-ink: auto;
-        color: currentColor;
-      }
-
-      /* Make images easier to work with */
-      img,
-      picture {
-        max-width: 100%;
-        display: block;
-      }
-
-      /* Inherit fonts for inputs and buttons */
-      input,
-      button,
-      textarea,
-      select {
-        font-family: inherit;
-        font-size: inherit;
-      }
-
-      /* Make sure textareas without a rows attribute are not tiny */
-      textarea:not([rows]) {
-        min-height: 10em;
-      }
-
-      /* Anything that has been anchored to should have extra scroll margin */
-      :target {
-        scroll-margin-block: 5ex;
-      }
-
-      body {
-        background-color: #16171c;
-        color: #edece4;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        padding-top: 2.5rem;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-      .container {
-        max-width: 800px;
-        width: 100%;
-        padding: 0 1rem;
-        margin: 0 auto;
-      }
-      .button-group {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
-      }
-      @media (min-width: 768px) {
-        .button-group {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-      }
-      .btn {
-        display: inline-flex;
-        padding: 10px 15px;
-        background-color: #20242b;
-        color: #edece4;
-        justify-content: center;
-        border-radius: 6px;
-        box-shadow: 0 0 0 2px #000000,
-          inset 0 2px 3px 1px rgba(255, 255, 255, 0.05);
-      }
-      .description {
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.7;
-        margin-bottom: 3.5rem;
-        color: #a7a7a6;
-      }
-      h1 {
-        font-size: 24px;
-        line-height: 1.5;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: #edece4;
-      }
-      footer {
-        padding: 1rem 0;
-        text-align: center;
-        font-size: 12px;
-        line-height: 1.5;
-        margin-top: auto;
-      }
-    </style>
   </head>
   <body>
-    <main class="container">
-      <div class="description">
-        <div>
-          <h1>ToolTop KIT</h1>
-          <span>v.0.0.1 - beta</span>
+    <main>
+      <div class="container">
+        <div class="description">
+          <div class="description--title-wrapper">
+            <h1 class="description__title">ToolTip KIT</h1>
+            <span class="description__version">v.0.0.1 - beta</span>
+          </div>
+          <div class="description__content">
+            <p>
+              Lightweight tooltips library developed exclusively with CSS, with
+              no JavaScript dependencies. Easy to integrate, customizable and
+              compatible with all modern browsers.
+            </p>
+          </div>
         </div>
-        <p>
-          Lightweight tooltips library developed exclusively with CSS, with no
-          JavaScript dependencies. Easy to integrate, customizable and
-          compatible with all modern browsers.
-        </p>
-      </div>
-      <div class="button-group">
-        <div class="btn" data-ttk aria-label="Up">Up</div>
-        <div class="btn" data-ttk="down" aria-label="Bottom">Bottom</div>
-        <div class="btn" data-ttk="left" aria-label="Left">Left</div>
-        <div class="btn" data-ttk="right" aria-label="Right">Right</div>
-        <div class="btn" data-ttk="up-left" aria-label="Up-Left">Up-Left</div>
-        <div class="btn" data-ttk="up-right" aria-label="Up-Right">
-          Up-Right
-        </div>
-        <div class="btn" data-ttk="down-left" aria-label="Down-Left">
-          Down-Left
-        </div>
-        <div class="btn" data-ttk="down-right" aria-label="Down-Right">
-          Down-Right
+        <div class="content">
+          <div class="button-group">
+            <div class="btn" data-ttk aria-label="Up">Up</div>
+            <div class="btn" data-ttk="down" aria-label="Bottom">Bottom</div>
+            <div class="btn" data-ttk="left" aria-label="Left">Left</div>
+            <div class="btn" data-ttk="right" aria-label="Right">Right</div>
+            <div class="btn" data-ttk="up-left" aria-label="Up-Left">
+              Up-Left
+            </div>
+            <div class="btn" data-ttk="up-right" aria-label="Up-Right">
+              Up-Right
+            </div>
+            <div class="btn" data-ttk="down-left" aria-label="Down-Left">
+              Down-Left
+            </div>
+            <div class="btn" data-ttk="down-right" aria-label="Down-Right">
+              Down-Right
+            </div>
+          </div>
         </div>
       </div>
     </main>
