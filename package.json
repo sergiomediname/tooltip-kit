@@ -1,0 +1,32 @@
+{
+  "name": "tooltip-kit",
+  "version": "1.0.0",
+  "main": "tooltip.min.css",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel watch:scss server",
+    "build": "npm-run-all lint:scss:fix compile:scss minify:scss",
+    "watch:scss": "sass --watch scss/tooltip.scss tooltip.css --no-source-map",
+    "compile:scss": "sass --no-source-map scss/tooltip.scss tooltip.css --style expanded",
+    "server": "servor ./ --reload --browse",
+    "lint:scss": "stylelint scss/*.scss --config .stylelintrc.json",
+    "lint:scss:fix": "stylelint scss/*.scss --config .stylelintrc.json --fix",
+    "minify:scss": "cleancss -O2 --with-rebase -o tooltip.min.css tooltip.css",
+    "release:patch": "commit-and-tag-version --release-as patch",
+    "release:minor": "commit-and-tag-version --release-as minor",
+    "release:major": "commit-and-tag-version --release-as major"
+  },
+  "keywords": [],
+  "author": "Sergio Medina (https://github.com/sergiomediname/)",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "commit-and-tag-version": "^12.4.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.72.0",
+    "servor": "^4.0.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard-scss": "^13.0.0"
+  }
+}

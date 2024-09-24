@@ -1,0 +1,32 @@
+@use "./../variables" as v;
+
+@mixin ttk-core {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform ease #{v.$animation-duration}, opacity ease #{v.$animation-duration};
+  transform-origin: var(--ttk-origin, top);
+  inset: var(--ttk-it, auto) var(--ttk-ir, auto) var(--ttk-ib, auto) var(--ttk-il, auto);
+  transform: translate(var(--ttk-tx, 0), var(--ttk-ty, 0));
+  z-index: 20;
+  will-change: transform;
+}
+
+@mixin ttk-text {
+  white-space: nowrap;
+  display: inline-flex;
+  content: attr(aria-label);
+  background-color: var(--ttk-bg, #{v.$text-background});
+  padding: var(--ttk-padding, #{v.$text-padding});
+  border-radius: var(--ttk-radius, #{v.$text-radius});
+  color: var(--ttk-color, #{v.$text-color});
+  font-size: var(--ttk-text, #{v.$text-size});
+  line-height: 1;
+}
+
+@mixin ttk-arrow {
+  content: '';
+  border-style: solid;
+  border-color: transparent;
+  border-width: var(--ttk-arrow-size, #{v.$arrow-size});
+}
