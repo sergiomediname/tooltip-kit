@@ -1,6 +1,6 @@
 {
   "name": "tooltip-kit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "tooltip.min.css",
   "type": "module",
   "scripts": {
