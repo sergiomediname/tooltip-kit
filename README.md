@@ -34,6 +34,7 @@ Define new values for the tooltip's CSS variables to change its appearance. The 
 | ------------------ | ---------- | --------------------------------------- |
 | `--ttk-arrow-size` | `6px`      | Arrow size                              |
 | `--ttk-offset`     | `4px`      | Margin between arrow and parent element |
+| `--ttk-text`       | `10px`     | Text size                               |
 | `--ttk-bg`         | `#000`     | Background color                        |
 | `--ttk-padding`    | `5px 10px` | Internal space                          |
 | `--ttk-radius`     | `4px`      | Border radius                           |

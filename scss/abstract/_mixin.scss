@@ -20,6 +20,8 @@
   padding: var(--ttk-padding, #{v.$text-padding});
   border-radius: var(--ttk-radius, #{v.$text-radius});
   color: var(--ttk-color, #{v.$text-color});
+  font-size: var(--ttk-text, #{v.$text-size});
+  line-height: 1;
 }
 
 @mixin ttk-arrow {

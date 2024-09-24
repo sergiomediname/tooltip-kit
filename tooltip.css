@@ -21,6 +21,8 @@
   padding: var(--ttk-padding, 5px 10px);
   border-radius: var(--ttk-radius, 4px);
   color: var(--ttk-color, #fff);
+  font-size: var(--ttk-text, 12px);
+  line-height: 1;
 }
 [data-ttk]::after {
   content: "";
